@@ -1,0 +1,26 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.1.5",
+  "description": "A simple bot for GroupMe using NodeJs.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "director": "",
+    "express": ""
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/pacific-badlands-59041"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
