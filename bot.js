@@ -35,9 +35,13 @@ function searchGiphy(giphyToSearch) {
     });
 
     response.on('end', function() {
-      var id = JSON.parse(str).data[0].id;
-      var giphyURL = 'http://i.giphy.com/' + id + '.gif';
-      postMessage(giphyURL);
+      if (!(str && JSON.parse(str).data[0])) {
+        postMessage('Couldn\'t find a gif 💩');
+      } else {
+        var id = JSON.parse(str).data[0].id;
+        var giphyURL = 'http://i.giphy.com/' + id + '.gif';
+        postMessage(giphyURL);
+      }
     });
   };
 
