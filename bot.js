@@ -15,7 +15,6 @@ function respond() {
     searchGiphy(request.text.substring(giphyCommand.length + 1));
     this.res.end();
   } else {
-    console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
   }
@@ -24,7 +23,7 @@ function respond() {
 function searchGiphy(giphyToSearch) {
   var options = {
     host: 'api.giphy.com',
-    path: '/v1/gifs/search?q=' + encodeQuery(giphyToSearch) + '&api_key=dc6zaTOxFJmzC'
+    path: '/v1/gifs/search?q=' + encodeQuery(giphyToSearch) + '&api_key=' + API_KEY
   };
 
   var callback = function(response) {
@@ -55,7 +54,6 @@ function encodeQuery(query) {
 function postMessage(message) {
   var botResponse, options, body, botReq;
 
-
   botResponse = message;
 
   options = {
@@ -74,9 +72,8 @@ function postMessage(message) {
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
         console.log('202 response: ' + JSON.stringify(res));
-        //neat
       } else {
-        console.log('rejecting bad status code ' + res.statusCode);
+        console.log('rejecting bad status code from groupme:' + res.statusCode);
       }
   });
 

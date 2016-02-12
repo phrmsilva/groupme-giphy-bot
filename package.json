@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.1.5",
-  "description": "A simple bot for GroupMe using NodeJs.",
+  "name": "groupme-giphy-bot",
+  "version": "0.0.1",
+  "description": "A simple bot for adding the /giphy command to GroupMe.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.heroku.com/pacific-badlands-59041"
+    "url": "https://github.com/phrmsilva/groupme-giphy-bot.git"
   },
   "keywords": [
     "node",
