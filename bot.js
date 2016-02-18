@@ -71,7 +71,7 @@ function postMessage(message) {
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
-        console.log('202 response: ' + JSON.stringify(res));
+        console.log('202 response');
       } else {
         console.log('rejecting bad status code from groupme:' + res.statusCode);
       }
